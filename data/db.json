@@ -1,19 +1,14 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Camisa",
-      "price": 59.9
+      "id": "9199",
+      "name": "camisa azul",
+      "price": "25.50"
     },
     {
-      "id": "2",
-      "name": "Calça vermelha",
-      "price": 300
-    },
-    {
-      "id": "3",
-      "name": "Boné de aba reta",
-      "price": 29.9
+      "id": "30d7",
+      "name": "caneta vermelhoa",
+      "price": "0.50"
     }
   ]
 }

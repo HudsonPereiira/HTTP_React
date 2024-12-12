@@ -7,8 +7,14 @@ const url = "http://localhost:3000/products";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const { data: items, setData: setItems, httpConfig, loading, error } = useFetch(url);
-  
+  const {
+    data: items,
+    setData: setItems,
+    httpConfig,
+    loading,
+    error,
+  } = useFetch(url);
+
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
 
@@ -29,7 +35,7 @@ function App() {
   const handleRemove = async (id) => {
     // Chamada da função httpConfig para remover o produto (DELETE)
     httpConfig(id, "DELETE");
-    
+
     // Remover o item da lista de produtos local
     setItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
@@ -39,14 +45,17 @@ function App() {
       <h1>Lista de Produtos</h1>
       {loading && <p>Carregando dados...</p>}
       {error && <p>{error}</p>}
-      
       <ul>
-        {items && items.map((product) => (
-          <li key={product.id}>
-            {product.name} - R$: {product.price}
-            <button onClick={() => handleRemove(product.id)}>Excluir</button>
-          </li>
-        ))}
+        {items &&
+          items.map((product) => (
+            <li key={product.id}>
+              {product.name} - R$: {product.price}
+              <div class = "button-group">
+              <button onClick={() => handleRemove(product.id)}>Excluir</button>
+              </div>
+              
+            </li>
+          ))}
       </ul>
 
       <div className="add-product">
@@ -72,7 +81,6 @@ function App() {
           </label>
 
           {!loading && <input type="submit" value="Criar" />}
-          {error && <p>{error}</p>}
         </form>
       </div>
     </div>
