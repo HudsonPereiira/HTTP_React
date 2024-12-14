@@ -1,14 +1,19 @@
 {
   "products": [
     {
-      "id": "9199",
-      "name": "camisa azul",
-      "price": "25.50"
+      "id": "ac9a",
+      "name": "Camisa Azul",
+      "price": "75.50"
     },
     {
-      "id": "30d7",
-      "name": "caneta vermelhoa",
-      "price": "0.50"
+      "id": "451e",
+      "name": "Camisa Verde",
+      "price": "75.50"
+    },
+    {
+      "id": "3717",
+      "name": "Camisa Rosa",
+      "price": "75.50"
     }
   ]
 }

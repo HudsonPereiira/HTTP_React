@@ -50,7 +50,7 @@ function App() {
           items.map((product) => (
             <li key={product.id}>
               {product.name} - R$: {product.price}
-              <div class = "button-group">
+              <div className = "button-group">
               <button onClick={() => handleRemove(product.id)}>Excluir</button>
               </div>
               
